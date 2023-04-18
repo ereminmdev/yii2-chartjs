@@ -16,8 +16,21 @@ Insert widget into view:
 
 ```
 <?= \ereminmdev\yii2\chartjs\ChartJs::widget([
-    'clientOptions' => [
-        ...
+    'id' => 'my_chart',
+    'type' => 'bar',
+    'data' => [...],
+    'options' => [
+        'scales' => [
+            'y' => [
+                'beginAtZero' => true,
+            ],
+        ],
+        'plugins' => [
+            'legend' => [
+                'position' => 'bottom',
+            ],
+        ],
     ],
+    'plugins' => [...],
 ]) ?>
 ```
