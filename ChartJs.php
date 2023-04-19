@@ -60,8 +60,8 @@ class ChartJs extends Widget
 
         $this->clientOptions['type'] = $this->clientOptions['type'] ?? $this->type;
         $this->clientOptions['data'] = $this->clientOptions['data'] ?? $this->data;
-        $this->clientOptions['options'] = $this->clientOptions['options'] ?? $this->options;
-        $this->clientOptions['plugins'] = $this->clientOptions['plugins'] ?? $this->plugins;
+        $this->clientOptions['options'] = ($this->clientOptions['options'] ?? $this->options) ?: null;
+        $this->clientOptions['plugins'] = ($this->clientOptions['plugins'] ?? $this->plugins) ?: null;
 
         $view->registerJs('window.chartJs_' . $id . ' = new Chart(document.getElementById("' . $id . '"), ' . Json::encode($this->clientOptions) . ');');
     }
