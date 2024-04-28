@@ -2,7 +2,7 @@
   "name": "ereminmdev/yii2-chartjs",
   "description": "Yii2 widget for Chart.js library.",
   "keywords": ["yii2","widget","chartjs","javascript"],
-  "homepage": "https://bitbucket.org/ereminmdev/yii2-chartjs",
+  "homepage": "https://github.com/ereminmdev/yii2-chartjs",
   "type": "yii2-extension",
   "license": "MIT",
   "authors": [
@@ -13,7 +13,7 @@
     }
   ],
   "require": {
-    "php": ">=7.0",
+    "php": ">=7.4",
     "yiisoft/yii2": "~2.0.1",
     "npm-asset/chart.js": "^4.2"
   },

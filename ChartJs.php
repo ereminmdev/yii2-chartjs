@@ -53,13 +53,13 @@ class ChartJs extends Widget
         $id = $this->getId();
         $view = $this->getView();
 
-        $this->canvasOptions['id'] = $this->canvasOptions['id'] ?? $id;
+        $this->canvasOptions['id'] ??= $id;
         echo Html::tag('canvas', '', $this->canvasOptions);
 
         ChartJsAsset::register($view);
 
-        $this->clientOptions['type'] = $this->clientOptions['type'] ?? $this->type;
-        $this->clientOptions['data'] = $this->clientOptions['data'] ?? $this->data;
+        $this->clientOptions['type'] ??= $this->type;
+        $this->clientOptions['data'] ??= $this->data;
         $this->clientOptions['options'] = ($this->clientOptions['options'] ?? $this->options) ?: null;
         $this->clientOptions['plugins'] = ($this->clientOptions['plugins'] ?? $this->plugins) ?: null;
 
