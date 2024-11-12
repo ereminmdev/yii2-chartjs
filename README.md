@@ -34,3 +34,13 @@ Insert widget into view:
     'plugins' => [...],
 ]) ?>
 ```
+
+Display labels on data for any type of charts:
+
+```
+ChartJsDataLabelsAsset::register($view);
+
+$view->registerJs('Chart.register(ChartDataLabels);');
+```
+
+https://chartjs-plugin-datalabels.netlify.app/

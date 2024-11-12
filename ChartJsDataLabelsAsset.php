@@ -4,6 +4,9 @@ namespace ereminmdev\yii2\chartjs;
 
 use yii\web\AssetBundle;
 
+/**
+ * https://chartjs-plugin-datalabels.netlify.app/
+ */
 class ChartJsDataLabelsAsset extends AssetBundle
 {
     public $sourcePath = '@npm/chartjs-plugin-datalabels/dist';

@@ -43,10 +43,6 @@ class ChartJs extends Widget
      * @var array canvas element html attributes
      */
     public $canvasOptions = [];
-    /**
-     * @var bool
-     */
-    public $enableDataLabelsPlugin = true;
 
     /**
      * {@inheritdoc}
@@ -67,10 +63,5 @@ class ChartJs extends Widget
         $this->clientOptions['plugins'] = ($this->clientOptions['plugins'] ?? $this->plugins) ?: null;
 
         $view->registerJs('window.chartJs_' . $id . ' = new Chart(document.getElementById("' . $id . '"), ' . Json::encode($this->clientOptions) . ');');
-
-        if ($this->enableDataLabelsPlugin) {
-            ChartJsDataLabelsAsset::register($view);
-            $view->registerJs('Chart.register(ChartDataLabels);');
-        }
     }
 }
